@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&family=Poppins:wght@700&family=Syne:wght@700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #121212;
+}
+
+.syne-bold {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+}
+
+.poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.inconsolata-regular {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+}
+
+.font-12 {
+    font-size: 12px;
+    line-height: 0.75rem;
+}
+
+.font-14 {
+    font-size: 14px;
+    line-height: 0.875rem;
+}
+
+.font-16 {
+    font-size: 16px;
+    line-height: 1rem;
+}
+
+.font-18 {
+    font-size: 18px;
+    line-height: 1.125rem;
+}
+
+.font-20 {
+    font-size: 20px;
+    line-height: 1.25rem;
+}
+
+.font-24 {
+    font-size: 24px;
+    line-height: 1.5rem;
+}
+
+.font-32 {
+    font-size: 32px;
+    line-height: 2rem;
+}
+
+/* Botão padrão */
+.btn-primary {
+    /* Layout Properties */
+    top: 610px;
+    left: 3607px;
+    width: 114px;
+    height: 48px;
+    /* UI Properties */
+    background: #131414 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 3px #00000029;
+    border: 1px solid #131414;
+    border-radius: 10px;
+    text-align: center;
+    font: normal normal bold 14px/15px Inconsolata;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.btn-small {
+    width: 114px;
+    height: 32px;
+    /* UI Properties */
+    box-shadow: 0px 1px 3px #00000029;
+    background: #131414 0% 0% no-repeat padding-box;
+    border: 1px solid #131414;
+    border-radius: 10px;
+    opacity: 1;
+    font: normal normal bold 14px/15px Inconsolata;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+/* Botão ativo */
+.btn-primary:active {
+    font: normal normal bold 14px/15px Inconsolata;
+    letter-spacing: 0px;
+    color: #131414;
+    top: 610px;
+    left: 3799px;
+    width: 114px;
+    height: 48px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 3px #00000029;
+    border: 1px solid #131414;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.btn-small:active {
+    font: normal normal bold 14px/15px Inconsolata;
+    letter-spacing: 0px;
+    color: #131414;
+    top: 683px;
+    left: 3799px;
+    width: 114px;
+    height: 32px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 3px #00000029;
+    border: 1px solid #131414;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+/* Botão desabilitado */
+.btn-primary:disabled {
+    top: 610px;
+    left: 3991px;
+    width: 114px;
+    height: 48px;
+    background: #CFD0D0 0% 0% no-repeat padding-box;
+    border: 1px solid #CFD0D0;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.btn-small:disabled {
+    width: 114px;
+    height: 32px;
+    /* UI Properties */
+    box-shadow: 0px 1px 3px #00000029;
+    background: #CFD0D0 0% 0% no-repeat padding-box;
+    color: #A0A1A1;
+    border: 1px solid #CFD0D0;
+    border-radius: 10px;
+    opacity: 1;
+    font: normal normal bold 14px/15px Inconsolata;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
