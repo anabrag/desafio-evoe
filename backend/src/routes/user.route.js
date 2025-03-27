@@ -20,7 +20,7 @@ router.put('/:user_id', async (req, res) => {
   try {
     const { user_id } = req.params;
     await database.user.update({
-      where: { id: user_id },
+      where: { id: Number(user_id) },
       data: {
         ...req.body
       }
@@ -46,11 +46,13 @@ router.get('/:user_id', async (req, res) => {
   try {
     const { user_id } = req.params;
     const user = await database.user.findUnique({
-      where: { id: user_id }
+      where: { id: Number(user_id) }
     });
     if (!user) {
       return res.status(404).send({ error: 'User not found.' });
     }
+    delete user['password']
+    
     res.status(200).send(user);
   } catch (ex) {
     console.error('Error fetching user:', ex);
