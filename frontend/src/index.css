@@ -56,7 +56,6 @@ body {
     line-height: 2rem;
 }
 
-/* Botão padrão */
 .profile-container {
     display: flex;
     justify-content: center;
@@ -65,21 +64,20 @@ body {
     background-color: #FFFFFF;
 }
 
-/* Card maior */
+/* Card*/
 .profile-card {
+    position: relative;
     background: #fff;
     padding: 50px;
     border-radius: 12px;
     width: 900px;
     display: flex;
     gap: 50px;
-    border: 1px solid #A0A1A1; /* Borda cinza clara */
+    border: 1px solid #A0A1A1; 
     box-shadow: 1px 1px 3px #00000029;
 }
 
-
-
-/* Lado esquerdo - Avatar e Infos */
+/* Avatar e Infos */
 .profile-left {
     display: flex;
     flex-direction: column;
@@ -119,10 +117,6 @@ body {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
-.profile-info {
-    margin-top: 20px;
-}
-
 .profile-info h2 {
     font-size: 28px;
     margin: 8px 0;
@@ -139,7 +133,7 @@ body {
     font-weight: bold;
 }
 
-/* Lado direito - Formulário */
+/* Formulário */
 .profile-right {
     width: 60%;
     display: flex;
@@ -200,7 +194,7 @@ body {
     opacity: 1;
 }
 
-/* Botões - Estilização conforme a imagem */
+/* Botões */
 .button-container {
     display: flex;
     gap: 20px;
@@ -208,6 +202,26 @@ body {
 }
 
 /* Botão padrão (Default) */
+.save-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+    width: 114px;
+    height: 48px;
+    background: #131414;
+    border: 1px solid #131414;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font: normal normal bold 14px/15px Inconsolata;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0px 1px 3px #00000029;
+}
+
 .action-button {
     width: 114px;
     height: 48px;
@@ -224,23 +238,6 @@ body {
     outline: none;
 }
 
-.action-button-small {
-    top: 683px;
-    left: 3607px;
-    width: 114px;
-    height: 32px;
-    background: #131414 0% 0% no-repeat padding-box;
-    box-shadow: 0px 1px 3px #00000029;
-    border: 1px solid #131414;
-    border-radius: 10px;
-    opacity: 1;
-    text-align: center;
-    font: normal normal bold 14px/15px Inconsolata;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-}
-
 /* Estado Ativo (Active) */
 .action-button:active {
     background: #FFFFFF;
@@ -248,23 +245,13 @@ body {
     border: 1px solid #131414;
 }
 
-.action-button-small:active {
-    top: 683px;
-    left: 3799px;
-    width: 114px;
-    height: 32px;
-    box-shadow: 0px 1px 3px #00000029;
-    border: 1px solid #131414;
-    border-radius: 10px;
-    opacity: 1;
-    text-align: center;
-    font: normal normal bold 14px/15px Inconsolata;
-    letter-spacing: 0px;
+.save-button:active {
+    background: #FFFFFF;
     color: #131414;
-    opacity: 1;
-    background-color: white;
+    border: 1px solid #131414;
 }
 
+/* Estado Desativado (Disabled) */
 .action-button-small:disabled {
     top: 683px;
     left: 3991px;
@@ -274,14 +261,85 @@ body {
     border: 1px solid #CFD0D0;
     border-radius: 10px;
     opacity: 1;
-    color: #A0A1A1; /* Definindo a cor do texto como a mesma cor do botão */
-    cursor: not-allowed; /* Indicando que o botão está desabilitado */
+    color: #A0A1A1;
+    cursor: not-allowed; 
 }
 
-/* Estado Desativado (Disabled) */
 .action-button:disabled {
     background: #CFD0D0;
     border: 1px solid #CFD0D0;
     color: #A0A1A1;
     cursor: not-allowed;
+}
+
+/* Media query para telas menores */
+@media (max-width: 480px) {
+    .profile-card {
+        width: 95%;
+        max-width: 350px;
+        padding: 10px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h2 {
+        font-size: 16px;
+    }
+
+    .profile-info .email {
+        font-size: 12px;
+    }
+
+    .action-button {
+        top: 683px;
+        left: 3607px;
+        width: 114px;
+        height: 32px;
+        background: #131414 0% 0% no-repeat padding-box;
+        box-shadow: 0px 1px 3px #00000029;
+        border: 1px solid #131414;
+        border-radius: 10px;
+        opacity: 1;
+        text-align: center;
+        font: normal normal bold 14px/15px Inconsolata;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+    }
+
+    .save-button {
+        position: relative; 
+        bottom: auto; 
+        right: auto;  
+        width: 100%; 
+        margin-top: 10px;  
+        height: 40px; 
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #131414 0% 0% no-repeat padding-box;
+        box-shadow: 0px 1px 3px #00000029;
+        border: 1px solid #131414;
+        border-radius: 10px;
+        opacity: 1;
+        text-align: center;
+        font: normal normal bold 14px/15px Inconsolata;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+    }
+
+    .input-group input {
+        width: 100%; 
+        box-sizing: border-box;
+    }
+
+    .input-group input[disabled] {
+        width: 100%; 
+        text-align: center;
+    }
 }

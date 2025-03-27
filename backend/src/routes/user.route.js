@@ -20,9 +20,15 @@ router.put('/:user_id', async (req, res) => {
   try {
     const { user_id } = req.params;
     await database.user.update({
-      where: { id: Number(user_id) },
+      where: {
+        id: Number(user_id) 
+      },
       data: {
-        ...req.body
+        name: req.body.name,
+        email: req.body.email,
+        taxid: req.body.taxid,
+        phoneNumber: req.body.phoneNumber,
+        updatedAt: new Date() 
       }
     });
     res.status(200).send();

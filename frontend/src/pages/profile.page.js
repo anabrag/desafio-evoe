@@ -31,6 +31,7 @@ const ProfilePage = () => {
     useEffect(() => {
         loadUserProfile(MOCK_USER_ID)
     }, [])
+    
     return (
         <div className="profile-container">
         <div className="profile-card">
@@ -53,7 +54,7 @@ const ProfilePage = () => {
             </div>
             <div className="input-group">
               <label>Telefone</label>
-              <input type="text" placeholder="(00) 00000-0000" value={user.phoneNumber} onChange={(event) => handleFormChange("telefone", event.target.value)}/>
+              <input type="text" placeholder="(00) 00000-0000" value={user.phoneNumber} onChange={(event) => handleFormChange("phoneNumber", event.target.value)}/>
             </div>
             <div className="input-group">
               <label>Email</label>
@@ -69,8 +70,8 @@ const ProfilePage = () => {
                 Mudar senha
               </button>
             </div>
-            <div className="save-button">
-              <button className="action-button" onClick={saveUserProfile}>Salvar</button>
+            <div>
+              <button className="save-button" onClick={saveUserProfile}>Salvar</button>
             </div>
           </div>
         </div>
